@@ -1,109 +1,249 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Lilás Acessível</title>
-    
-    <!-- Importando a fonte acessível diretamente do Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    
-    <!-- Todo o estilo CSS unificado aqui -->
-    <style>
-        /* Configuração geral do fundo lilás e tipografia acessível */
-        body {
-            background-color: #E6E6FA; /* Cor lilás suave */
-            font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
-            color: #1A1A2E; /* Texto bem escuro para alto contraste */
-            line-height: 1.6;
-            letter-spacing: 0.02em;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Criando uma caixa central para o conteúdo ficar organizado */
-        main {
-            max-width: 800px;
-            background-color: rgba(255, 255, 255, 0.5); /* Fundo levemente branco e transparente */
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        h1 {
-            color: #4A154B; /* Púrpura escuro para o título principal */
-            text-align: center;
-        }
-
-        /* Ajuste visual arredondado e com sombra para as imagens */
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            display: block;
-            margin: 20px auto;
-        }
-
-        /* Estilo do botão interativo */
-        button {
-            background-color: #4A154B;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-family: inherit; /* Puxa a mesma fonte da página */
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Efeito ao passar o mouse por cima do botão */
-        button:hover {
-            background-color: #2e0d2f;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acolher & Proteger | Conscientização com Fundo Lilás</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main>
-        <h1>Bem-vindo à sua Página!</h1>
-        <p>O fundo desta página é lilás suave para descansar a vista, e a fonte usada é a <strong>Atkinson Hyperlegible</strong>, projetada especificamente para facilitar a leitura e a acessibilidade visual.</p>
+  <!-- Barra de Emergência Superior -->
+  <div class="top-bar">
+    <span>🔒 Espaço seguro, sigiloso e acolhedor.</span>
+    <button id="quick-exit-btn" class="exit-btn" title="Sair da página imediatamente por segurança">
+      🛡️ Saída Rápida de Emergência
+    </button>
+  </div>
 
-        <!-- Imagem relacionada ao tema (pode ser trocada pelo link que você quiser) -->
-        <img id="imagemTema" src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Imagem relaxante com tons pastéis">
+  <div class="app-container">
+    
+    <!-- Cabeçalho Principal -->
+    <header class="main-header">
+      <div class="brand">
+        <span class="logo-icon">💜</span>
+        <div>
+          <h1>Portal Acolher & Proteger</h1>
+          <p>Informação, Prevenção e Direitos contra o Cyberbullying e a Violência de Gênero</p>
+        </div>
+      </div>
+    </header>
 
-        <p>Para testar a interatividade da página, clique no botão abaixo:</p>
+    <!-- Navegação Por Abas Principais -->
+    <nav class="nav-tabs">
+      <button class="nav-btn active" data-tab="inicio">Início & Visão Geral</button>
+      <button class="nav-btn" data-tab="cyberbullying">Cyberbullying</button>
+      <button class="nav-btn" data-tab="violencia">Violência contra a Mulher</button>
+      <button class="nav-btn" data-tab="direitos">Legislação & Direitos</button>
+      <button class="nav-btn" data-tab="ajuda">Canais de Ajuda</button>
+    </nav>
+
+    <!-- ÁREA DE CONTEÚDO PRINCIPAL (DASHBOARD) -->
+    <main id="main-view" class="content-view">
+      
+      <!-- ABA: INÍCIO -->
+      <section id="inicio" class="tab-panel active">
+        <div class="hero-card">
+          <h2>Conhecer para Prevenir, Informar para Proteger</h2>
+          <p>A violência digital e a violência contra a mulher frequentemente se cruzam no ambiente virtual e físico. Este portal reúne orientações práticas, amparo jurídico e apoio emocional em uma atmosfera visual em tons de lilás, projetada para proporcionar tranquilidade e foco durante a leitura.</p>
+        </div>
+
+        <h3 class="section-title">✨ Módulos Interativos (Clique nas divs para explorar)</h3>
         
-        <!-- Botão que será controlado pelo JavaScript -->
-        <button id="meuBotao">Clique aqui para testar</button>
+        <div class="cards-grid">
+          <!-- Div Interativa 1 -->
+          <div class="interactive-card" onclick="openDetail('cyber-tipos')">
+            <div>
+              <div class="card-icon">🌐</div>
+              <h3>Formas de Cyberbullying</h3>
+              <p>Entenda doxxing, stalking, discurso de ódio e vazamento não consentido de fotos e vídeos.</p>
+            </div>
+            <span class="card-link">Ler artigo detalhado &rarr;</span>
+          </div>
+
+          <!-- Div Interativa 2 -->
+          <div class="interactive-card" onclick="openDetail('cyber-provas')">
+            <div>
+              <div class="card-icon">📸</div>
+              <h3>Como Registrar Provas Digitais</h3>
+              <p>Guia prático sobre como salvar prints válidos, ata notarial e preservação de links para denúncias.</p>
+            </div>
+            <span class="card-link">Ver guia de proteção &rarr;</span>
+          </div>
+
+          <!-- Div Interativa 3 -->
+          <div class="interactive-card" onclick="openDetail('violencia-ciclo')">
+            <div>
+              <div class="card-icon">🔄</div>
+              <h3>O Ciclo da Violência</h3>
+              <p>Entenda as fases de Tensão, Agressão e Reconciliação para identificar relacionamentos abusivos.</p>
+            </div>
+            <span class="card-link">Compreender o ciclo &rarr;</span>
+          </div>
+
+          <!-- Div Interativa 4 -->
+          <div class="interactive-card" onclick="openDetail('violencia-tipos')">
+            <div>
+              <div class="card-icon">⚖️</div>
+              <h3>Os 5 Tipos de Violência</h3>
+              <p>Física, psicológica, moral, patrimonial e sexual detalhadas segundo a Lei Maria da Penha.</p>
+            </div>
+            <span class="card-link">Ver modalidades &rarr;</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABA: CYBERBULLYING -->
+      <section id="cyberbullying" class="tab-panel">
+        <div class="info-header-box">
+          <h2>Combate ao Cyberbullying e Violência Virtual</h2>
+          <p>O cyberbullying utiliza redes sociais, aplicativos e jogos para intimidar, perseguir, humilhar ou chantagear pessoas. O alcance contínuo do ambiente digital exige estratégias firmes de proteção e denúncia.</p>
+        </div>
+
+        <div class="cards-grid">
+          <div class="interactive-card" onclick="openDetail('cyber-tipos')">
+            <div>
+              <div class="card-icon">⚠️</div>
+              <h3>Manifestações Virtuais Comuns</h3>
+              <p>Cyberstalking, falsificação de identidade, linchamento virtual e exclusão proposital.</p>
+            </div>
+            <span class="card-link">Acessar detalhes &rarr;</span>
+          </div>
+
+          <div class="interactive-card" onclick="openDetail('cyber-saude')">
+            <div>
+              <div class="card-icon">🧠</div>
+              <h3>Impactos na Saúde Mental</h3>
+              <p>Ansiedade, estresse, isolamento social, queda no rendimento e apoio psicológico.</p>
+            </div>
+            <span class="card-link">Ler orientações &rarr;</span>
+          </div>
+
+          <div class="interactive-card" onclick="openDetail('cyber-provas')">
+            <div>
+              <div class="card-icon">📑</div>
+              <h3>Passo a Passo de Ação</h3>
+              <p>Bloqueio imediato, denúncia na plataforma, registro de provas e B.O. em delegacia.</p>
+            </div>
+            <span class="card-link">Ver guia prático &rarr;</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABA: VIOLÊNCIA CONTRA A MULHER -->
+      <section id="violencia" class="tab-panel">
+        <div class="info-header-box">
+          <h2>Violência Contra a Mulher</h2>
+          <p>Abrange qualquer ato fundado no gênero que resulte em dano físico, sexual, psicológico ou patrimonial. A informação clara e a rede de apoio são passos decisivos para interromper o ciclo de abusos.</p>
+        </div>
+
+        <div class="cards-grid">
+          <div class="interactive-card" onclick="openDetail('violencia-tipos')">
+            <div>
+              <div class="card-icon">🛡️</div>
+              <h3>Tipos de Violência Doméstica</h3>
+              <p>Entenda a abrangência da lei e identifique sinais sutis de controle, manipulação e violência.</p>
+            </div>
+            <span class="card-link">Ver tipos de violência &rarr;</span>
+          </div>
+
+          <div class="interactive-card" onclick="openDetail('violencia-ciclo')">
+            <div>
+              <div class="card-icon">💔</div>
+              <h3>O Ciclo de Abuso Emocional</h3>
+              <p>Compreenda por que romper o ciclo exige amparo especializado e apoio da sociedade.</p>
+            </div>
+            <span class="card-link">Entender a dinâmica &rarr;</span>
+          </div>
+
+          <div class="interactive-card" onclick="openDetail('medidas-protetivas')">
+            <div>
+              <div class="card-icon">📜</div>
+              <h3>Medidas Protetivas de Urgência</h3>
+              <p>Como solicitar, prazos de concessão e garantias de afastamento do agressor.</p>
+            </div>
+            <span class="card-link">Saber sobre proteção &rarr;</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABA: LEGISLAÇÃO -->
+      <section id="direitos" class="tab-panel">
+        <div class="full-card">
+          <h2>Principais Leis de Proteção no Brasil</h2>
+          <div class="law-item">
+            <h3>Lei Maria da Penha (Lei nº 11.340/2006)</h3>
+            <p>Marco de proteção às mulheres contra a violência doméstica e familiar, garantindo medidas protetivas e assistência integral.</p>
+          </div>
+          <div class="law-item">
+            <h3>Lei Carolina Dieckmann (Lei nº 12.737/2012)</h3>
+            <p>Tipifica crimes cibernéticos, como invasão de dispositivos e furto/vazamento de dados e imagens privadas.</p>
+          </div>
+          <div class="law-item">
+            <h3>Lei do Stalking (Lei nº 14.132/2021)</h3>
+            <p>Criminaliza a perseguição obsessiva e reiterada, física ou online, que ameace a liberdade e a privacidade da pessoa.</p>
+          </div>
+          <div class="law-item">
+            <h3>Lei da Violência Psicológica (Lei nº 14.188/2021)</h3>
+            <p>Penaliza condutas que causem dano emocional à mulher por meio de humilhação, isolamento, chantagem ou controle.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABA: CANAIS DE AJUDA -->
+      <section id="ajuda" class="tab-panel">
+        <div class="help-box">
+          <h2>Canais Oficiais de Atendimento Gratuito e Confidencial</h2>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-number">Ligue 180</div>
+              <h4>Central de Atendimento à Mulher</h4>
+              <p>Gratuito e disponível 24 horas por dia. Oferece escuta, orientações e encaminhamento para a rede de acolhimento.</p>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-number">Ligue 190</div>
+              <h4>Polícia Militar (Emergência)</h4>
+              <p>Para emergências imediatas, agressões em andamento ou risco iminente à integridade física.</p>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-number">SaferNet</div>
+              <h4>Helpline Digital</h4>
+              <p>Atendimento especializado online para crimes virtuais, cibercrime e vazamento de dados (canaldeajuda.org.br).</p>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-number">DEAM / 191</div>
+              <h4>Delegacia da Mulher</h4>
+              <p>Procure a Delegacia Especializada de Atendimento à Mulher mais próxima para registro de B.O. e medida protetiva.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <!-- Todo o código JavaScript unificado aqui -->
-    <script>
-        // Seleciona o botão no HTML pelo ID que criamos
-        const botao = document.getElementById('meuBotao');
+    <!-- ÁREA DE PÁGINAS EXPANDIDAS DE CONTEÚDO (DETALHES) -->
+    <section id="detail-view" class="content-view hidden">
+      <button class="back-btn" onclick="closeDetail()">&larr; Voltar para o painel principal</button>
+      
+      <div id="detail-content-container" class="detail-body">
+        <!-- O conteúdo dinâmico será injetado pelo JavaScript -->
+      </div>
+    </section>
 
-        // Adiciona uma ação que vai acontecer apenas quando o botão for clicado
-        botao.addEventListener('click', function() {
-            
-            // Mostra um aviso na tela
-            alert('Olá! O seu JavaScript está funcionando perfeitamente na página lilás!');
-            
-            // Interação extra: Muda o texto do botão após o clique
-            botao.innerText = "Você clicou!";
-            
-            // Interação extra: Muda a cor de fundo da página de lilás para um rosa claro
-            document.body.style.backgroundColor = '#FFF0F5'; 
-        });
-    </script>
+    <!-- Rodapé Interativo -->
+    <footer class="main-footer">
+      <div class="footer-reflection">
+        <p id="reflection-quote">"A informação clara e o acolhimento seguro transformam vidas."</p>
+        <button id="new-quote-btn">Gerar Mensagem de Apoio</button>
+      </div>
+      <p class="copyright">&copy; Portal Acolher & Proteger — Design em Tons Lilás para Conforto e Leitura</p>
+    </footer>
 
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
