@@ -3,79 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conscientização e Apoio: Respeito e Segurança Digital</title>
-    
-    <!-- Fonte Nunito (vibe calma, amigável e acessível) -->
+    <title>Plataforma Interativa de Apoio e Conscientização</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="header">
-        <h1>Espaço de Conscientização e Apoio</h1>
-        <p>Informaçao, acolhimento e caminhos para a prevenção da violência e do cyberbullying.</p>
+        <h1>Acolhimento e Segurança Digital</h1>
+        <p>Espaço interativo de orientação sobre o combate à violência e proteção online.</p>
+        <button id="btnModal" class="btn-emergencia">Ajuda Rápida & Emergência</button>
     </header>
 
-    <main class="container">
-        
-        <!-- Seção: Violência contra a Mulher -->
-        <section class="section">
-            <h2>Combate à Violência Contra a Mulher</h2>
-            <p>Conhecer os direitos e os canais de apoio é o primeiro passo para a proteção e o combate a qualquer tipo de agressão.</p>
-            
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>Central de Atendimento à Mulher</h3>
-                    <p>Saiba como funciona o Ligue 180, canal gratuito e confidencial que oferece escuta e orientação.</p>
-                    <a href="https://www.gov.br/mdh/pt-br/assuntos/violencia-contra-a-mulher" target="_blank" class="card-btn">Acessar Informações</a>
+    <div class="container">
+        <!-- Campo de Busca Dinâmica -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Pesquisar recurso, artigo ou canal de apoio...">
+        </div>
+
+        <!-- Navegação por Abas -->
+        <nav class="tabs-nav">
+            <button class="tab-btn active" data-tab="tab-mulher">Violência contra a Mulher</button>
+            <button class="tab-btn" data-tab="tab-cyber">Cyberbullying e Segurança</button>
+        </nav>
+
+        <!-- Conteúdo das Abas -->
+        <main class="tab-content-container">
+            <!-- Aba 1: Violência contra a Mulher -->
+            <section id="tab-mulher" class="tab-panel active">
+                <div class="cards-grid">
+                    <article class="card" data-keywords="180 ligue mulher violencia central atendimento">
+                        <h3>Central de Atendimento (Ligue 180)</h3>
+                        <p>Serviço gratuito e confidencial com orientação comunitária e rede de proteção em todo o país.</p>
+                        <a href="https://www.gov.br/mdh/pt-br/assuntos/violencia-contra-a-mulher" target="_blank" rel="noopener" class="card-link">Acessar Informações</a>
+                    </article>
+
+                    <article class="card" data-keywords="lei maria da penha direitos tipos violencia fisica psicologica">
+                        <h3>Lei Maria da Penha e Direitos</h3>
+                        <p>Entenda o amparo legal contra a violência física, psicológica, patrimonial, moral e sexual.</p>
+                        <a href="https://www.institutomariadapenha.org.br" target="_blank" rel="noopener" class="card-link">Saiba Mais</a>
+                    </article>
+
+                    <article class="card" data-keywords="mapa acolhimento delegacia apoio psicologico">
+                        <h3>Rede de Acolhimento Legal e Psicológico</h3>
+                        <p>Serviços integrados de suporte comunitário, apoio emocional e assistência jurídica voluntária.</p>
+                        <a href="https://www.mapadodoacolhimento.org" target="_blank" rel="noopener" class="card-link">Conhecer a Rede</a>
+                    </article>
                 </div>
+            </section>
 
-                <div class="card">
-                    <h3>Tipos de Violência</h3>
-                    <p>Entenda as diferentes formas de violência (física, psicológica, patrimonial e moral) segundo a Lei Maria da Penha.</p>
-                    <a href="https://www.institutomariadapenha.org.br" target="_blank" class="card-btn">Saiba Mais</a>
+            <!-- Aba 2: Cyberbullying e Segurança -->
+            <section id="tab-cyber" class="tab-panel">
+                <div class="cards-grid">
+                    <article class="card" data-keywords="cyberbullying redes sociais protecao abusos online safernet">
+                        <h3>Prevenção ao Cyberbullying</h3>
+                        <p>Guias práticos de segurança digital, privacidade em redes sociais e combate ao assédio virtual.</p>
+                        <a href="https://new.safernet.org.br/conteudo/cyberbullying" target="_blank" rel="noopener" class="card-link">Guia SaferNet</a>
+                    </article>
+
+                    <article class="card" data-keywords="denuncia provas print abusos internet crimes virtuais">
+                        <h3>Como Registrar e Denunciar Abusos</h3>
+                        <p>Passo a passo para a preservação de provas digitais e envio seguro aos canais competentes.</p>
+                        <a href="https://denuncia.safernet.org.br" target="_blank" rel="noopener" class="card-link">Canal de Denúncia</a>
+                    </article>
+
+                    <article class="card" data-keywords="cvv apoio emocional escuta preventiva saude mental">
+                        <h3>Suporte Emocional (CVV)</h3>
+                        <p>Atendimento gratuito de escuta empática e acolhimento emocional disponível 24 horas por dia.</p>
+                        <a href="https://www.cvv.org.br" target="_blank" rel="noopener" class="card-link">Falar com CVV</a>
+                    </article>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
+    </div>
 
-        <!-- Seção: Cyberbullying -->
-        <section class="section">
-            <h2>Prevenção e Combate ao Cyberbullying</h2>
-            <p>O ambiente virtual deve ser um espaço seguro de respeito, convivência saudável e proteção de dados.</p>
-            
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>O que é Cyberbullying?</h3>
-                    <p>Guia de orientação sobre agressões virtuais, exposição não consentida e como se proteger nas redes.</p>
-                    <a href="https://new.safernet.org.br/conteudo/cyberbullying" target="_blank" class="card-btn">Acessar Guia SaferNet</a>
-                </div>
-
-                <div class="card">
-                    <h3>Como Denunciar Abusos Online</h3>
-                    <p>Passo a passo para registrar provas, denunciar perfis em plataformas e buscar ajuda especializada.</p>
-                    <a href="https://denuncia.safernet.org.br" target="_blank" class="card-btn">Canal de Denúncias</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Painel Interativo controlado via JS -->
-        <section class="section interactive-box">
-            <h2>Precisa de Ajuda Imediata?</h2>
-            <p>Clique abaixo para exibir os contatos de emergência e apoio rápido.</p>
-            <button id="btnAjuda" class="main-btn">Ver Números Úteis</button>
-            <div id="painelAjuda" class="hidden">
-                <ul>
-                    <li><strong>180:</strong> Central de Atendimento à Mulher</li>
-                    <li><strong>190:</strong> Polícia Militar (Emergências)</li>
-                    <li><strong>188:</strong> CVV - Centro de Valorização da Vida (Apoio Emocional)</li>
-                </ul>
-            </div>
-        </section>
-
-    </main>
+    <!-- Modal Interativo de Emergência -->
+    <div id="modalEmergencia" class="modal-overlay">
+        <div class="modal-body">
+            <span id="closeModal" class="modal-close">&times;</span>
+            <h2>Canais Rápidos de Atendimento</h2>
+            <ul>
+                <li><strong>180:</strong> Central de Atendimento à Mulher</li>
+                <li><strong>190:</strong> Polícia Militar (Emergência Imediata)</li>
+                <li><strong>188:</strong> CVV (Apoio Emocional Gratuito)</li>
+                <li><strong>100:</strong> Disque Direitos Humanos</li>
+            </ul>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
