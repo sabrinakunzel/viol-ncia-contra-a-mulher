@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Lilás Acessível</title>
+    
+    <!-- Importando a fonte acessível diretamente do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Todo o estilo CSS unificado aqui -->
+    <style>
+        /* Configuração geral do fundo lilás e tipografia acessível */
+        body {
+            background-color: #E6E6FA; /* Cor lilás suave */
+            font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+            color: #1A1A2E; /* Texto bem escuro para alto contraste */
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Criando uma caixa central para o conteúdo ficar organizado */
+        main {
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.5); /* Fundo levemente branco e transparente */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            color: #4A154B; /* Púrpura escuro para o título principal */
+            text-align: center;
+        }
+
+        /* Ajuste visual arredondado e com sombra para as imagens */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Estilo do botão interativo */
+        button {
+            background-color: #4A154B;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-family: inherit; /* Puxa a mesma fonte da página */
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Efeito ao passar o mouse por cima do botão */
+        button:hover {
+            background-color: #2e0d2f;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Bem-vindo à sua Página!</h1>
+        <p>O fundo desta página é lilás suave para descansar a vista, e a fonte usada é a <strong>Atkinson Hyperlegible</strong>, projetada especificamente para facilitar a leitura e a acessibilidade visual.</p>
+
+        <!-- Imagem relacionada ao tema (pode ser trocada pelo link que você quiser) -->
+        <img id="imagemTema" src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Imagem relaxante com tons pastéis">
+
+        <p>Para testar a interatividade da página, clique no botão abaixo:</p>
+        
+        <!-- Botão que será controlado pelo JavaScript -->
+        <button id="meuBotao">Clique aqui para testar</button>
+    </main>
+
+    <!-- Todo o código JavaScript unificado aqui -->
+    <script>
+        // Seleciona o botão no HTML pelo ID que criamos
+        const botao = document.getElementById('meuBotao');
+
+        // Adiciona uma ação que vai acontecer apenas quando o botão for clicado
+        botao.addEventListener('click', function() {
+            
+            // Mostra um aviso na tela
+            alert('Olá! O seu JavaScript está funcionando perfeitamente na página lilás!');
+            
+            // Interação extra: Muda o texto do botão após o clique
+            botao.innerText = "Você clicou!";
+            
+            // Interação extra: Muda a cor de fundo da página de lilás para um rosa claro
+            document.body.style.backgroundColor = '#FFF0F5'; 
+        });
+    </script>
+
+</body>
+</html>
