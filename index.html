@@ -1,249 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acolher & Proteger | Conscientização com Fundo Lilás</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conscientização e Apoio: Respeito e Segurança Digital</title>
+    
+    <!-- Fonte Nunito (vibe calma, amigável e acessível) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Barra de Emergência Superior -->
-  <div class="top-bar">
-    <span>🔒 Espaço seguro, sigiloso e acolhedor.</span>
-    <button id="quick-exit-btn" class="exit-btn" title="Sair da página imediatamente por segurança">
-      🛡️ Saída Rápida de Emergência
-    </button>
-  </div>
-
-  <div class="app-container">
-    
-    <!-- Cabeçalho Principal -->
-    <header class="main-header">
-      <div class="brand">
-        <span class="logo-icon">💜</span>
-        <div>
-          <h1>Portal Acolher & Proteger</h1>
-          <p>Informação, Prevenção e Direitos contra o Cyberbullying e a Violência de Gênero</p>
-        </div>
-      </div>
+    <header class="header">
+        <h1>Espaço de Conscientização e Apoio</h1>
+        <p>Informaçao, acolhimento e caminhos para a prevenção da violência e do cyberbullying.</p>
     </header>
 
-    <!-- Navegação Por Abas Principais -->
-    <nav class="nav-tabs">
-      <button class="nav-btn active" data-tab="inicio">Início & Visão Geral</button>
-      <button class="nav-btn" data-tab="cyberbullying">Cyberbullying</button>
-      <button class="nav-btn" data-tab="violencia">Violência contra a Mulher</button>
-      <button class="nav-btn" data-tab="direitos">Legislação & Direitos</button>
-      <button class="nav-btn" data-tab="ajuda">Canais de Ajuda</button>
-    </nav>
-
-    <!-- ÁREA DE CONTEÚDO PRINCIPAL (DASHBOARD) -->
-    <main id="main-view" class="content-view">
-      
-      <!-- ABA: INÍCIO -->
-      <section id="inicio" class="tab-panel active">
-        <div class="hero-card">
-          <h2>Conhecer para Prevenir, Informar para Proteger</h2>
-          <p>A violência digital e a violência contra a mulher frequentemente se cruzam no ambiente virtual e físico. Este portal reúne orientações práticas, amparo jurídico e apoio emocional em uma atmosfera visual em tons de lilás, projetada para proporcionar tranquilidade e foco durante a leitura.</p>
-        </div>
-
-        <h3 class="section-title">✨ Módulos Interativos (Clique nas divs para explorar)</h3>
+    <main class="container">
         
-        <div class="cards-grid">
-          <!-- Div Interativa 1 -->
-          <div class="interactive-card" onclick="openDetail('cyber-tipos')">
-            <div>
-              <div class="card-icon">🌐</div>
-              <h3>Formas de Cyberbullying</h3>
-              <p>Entenda doxxing, stalking, discurso de ódio e vazamento não consentido de fotos e vídeos.</p>
+        <!-- Seção: Violência contra a Mulher -->
+        <section class="section">
+            <h2>Combate à Violência Contra a Mulher</h2>
+            <p>Conhecer os direitos e os canais de apoio é o primeiro passo para a proteção e o combate a qualquer tipo de agressão.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Central de Atendimento à Mulher</h3>
+                    <p>Saiba como funciona o Ligue 180, canal gratuito e confidencial que oferece escuta e orientação.</p>
+                    <a href="https://www.gov.br/mdh/pt-br/assuntos/violencia-contra-a-mulher" target="_blank" class="card-btn">Acessar Informações</a>
+                </div>
+
+                <div class="card">
+                    <h3>Tipos de Violência</h3>
+                    <p>Entenda as diferentes formas de violência (física, psicológica, patrimonial e moral) segundo a Lei Maria da Penha.</p>
+                    <a href="https://www.institutomariadapenha.org.br" target="_blank" class="card-btn">Saiba Mais</a>
+                </div>
             </div>
-            <span class="card-link">Ler artigo detalhado &rarr;</span>
-          </div>
+        </section>
 
-          <!-- Div Interativa 2 -->
-          <div class="interactive-card" onclick="openDetail('cyber-provas')">
-            <div>
-              <div class="card-icon">📸</div>
-              <h3>Como Registrar Provas Digitais</h3>
-              <p>Guia prático sobre como salvar prints válidos, ata notarial e preservação de links para denúncias.</p>
+        <!-- Seção: Cyberbullying -->
+        <section class="section">
+            <h2>Prevenção e Combate ao Cyberbullying</h2>
+            <p>O ambiente virtual deve ser um espaço seguro de respeito, convivência saudável e proteção de dados.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>O que é Cyberbullying?</h3>
+                    <p>Guia de orientação sobre agressões virtuais, exposição não consentida e como se proteger nas redes.</p>
+                    <a href="https://new.safernet.org.br/conteudo/cyberbullying" target="_blank" class="card-btn">Acessar Guia SaferNet</a>
+                </div>
+
+                <div class="card">
+                    <h3>Como Denunciar Abusos Online</h3>
+                    <p>Passo a passo para registrar provas, denunciar perfis em plataformas e buscar ajuda especializada.</p>
+                    <a href="https://denuncia.safernet.org.br" target="_blank" class="card-btn">Canal de Denúncias</a>
+                </div>
             </div>
-            <span class="card-link">Ver guia de proteção &rarr;</span>
-          </div>
+        </section>
 
-          <!-- Div Interativa 3 -->
-          <div class="interactive-card" onclick="openDetail('violencia-ciclo')">
-            <div>
-              <div class="card-icon">🔄</div>
-              <h3>O Ciclo da Violência</h3>
-              <p>Entenda as fases de Tensão, Agressão e Reconciliação para identificar relacionamentos abusivos.</p>
+        <!-- Painel Interativo controlado via JS -->
+        <section class="section interactive-box">
+            <h2>Precisa de Ajuda Imediata?</h2>
+            <p>Clique abaixo para exibir os contatos de emergência e apoio rápido.</p>
+            <button id="btnAjuda" class="main-btn">Ver Números Úteis</button>
+            <div id="painelAjuda" class="hidden">
+                <ul>
+                    <li><strong>180:</strong> Central de Atendimento à Mulher</li>
+                    <li><strong>190:</strong> Polícia Militar (Emergências)</li>
+                    <li><strong>188:</strong> CVV - Centro de Valorização da Vida (Apoio Emocional)</li>
+                </ul>
             </div>
-            <span class="card-link">Compreender o ciclo &rarr;</span>
-          </div>
-
-          <!-- Div Interativa 4 -->
-          <div class="interactive-card" onclick="openDetail('violencia-tipos')">
-            <div>
-              <div class="card-icon">⚖️</div>
-              <h3>Os 5 Tipos de Violência</h3>
-              <p>Física, psicológica, moral, patrimonial e sexual detalhadas segundo a Lei Maria da Penha.</p>
-            </div>
-            <span class="card-link">Ver modalidades &rarr;</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABA: CYBERBULLYING -->
-      <section id="cyberbullying" class="tab-panel">
-        <div class="info-header-box">
-          <h2>Combate ao Cyberbullying e Violência Virtual</h2>
-          <p>O cyberbullying utiliza redes sociais, aplicativos e jogos para intimidar, perseguir, humilhar ou chantagear pessoas. O alcance contínuo do ambiente digital exige estratégias firmes de proteção e denúncia.</p>
-        </div>
-
-        <div class="cards-grid">
-          <div class="interactive-card" onclick="openDetail('cyber-tipos')">
-            <div>
-              <div class="card-icon">⚠️</div>
-              <h3>Manifestações Virtuais Comuns</h3>
-              <p>Cyberstalking, falsificação de identidade, linchamento virtual e exclusão proposital.</p>
-            </div>
-            <span class="card-link">Acessar detalhes &rarr;</span>
-          </div>
-
-          <div class="interactive-card" onclick="openDetail('cyber-saude')">
-            <div>
-              <div class="card-icon">🧠</div>
-              <h3>Impactos na Saúde Mental</h3>
-              <p>Ansiedade, estresse, isolamento social, queda no rendimento e apoio psicológico.</p>
-            </div>
-            <span class="card-link">Ler orientações &rarr;</span>
-          </div>
-
-          <div class="interactive-card" onclick="openDetail('cyber-provas')">
-            <div>
-              <div class="card-icon">📑</div>
-              <h3>Passo a Passo de Ação</h3>
-              <p>Bloqueio imediato, denúncia na plataforma, registro de provas e B.O. em delegacia.</p>
-            </div>
-            <span class="card-link">Ver guia prático &rarr;</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABA: VIOLÊNCIA CONTRA A MULHER -->
-      <section id="violencia" class="tab-panel">
-        <div class="info-header-box">
-          <h2>Violência Contra a Mulher</h2>
-          <p>Abrange qualquer ato fundado no gênero que resulte em dano físico, sexual, psicológico ou patrimonial. A informação clara e a rede de apoio são passos decisivos para interromper o ciclo de abusos.</p>
-        </div>
-
-        <div class="cards-grid">
-          <div class="interactive-card" onclick="openDetail('violencia-tipos')">
-            <div>
-              <div class="card-icon">🛡️</div>
-              <h3>Tipos de Violência Doméstica</h3>
-              <p>Entenda a abrangência da lei e identifique sinais sutis de controle, manipulação e violência.</p>
-            </div>
-            <span class="card-link">Ver tipos de violência &rarr;</span>
-          </div>
-
-          <div class="interactive-card" onclick="openDetail('violencia-ciclo')">
-            <div>
-              <div class="card-icon">💔</div>
-              <h3>O Ciclo de Abuso Emocional</h3>
-              <p>Compreenda por que romper o ciclo exige amparo especializado e apoio da sociedade.</p>
-            </div>
-            <span class="card-link">Entender a dinâmica &rarr;</span>
-          </div>
-
-          <div class="interactive-card" onclick="openDetail('medidas-protetivas')">
-            <div>
-              <div class="card-icon">📜</div>
-              <h3>Medidas Protetivas de Urgência</h3>
-              <p>Como solicitar, prazos de concessão e garantias de afastamento do agressor.</p>
-            </div>
-            <span class="card-link">Saber sobre proteção &rarr;</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABA: LEGISLAÇÃO -->
-      <section id="direitos" class="tab-panel">
-        <div class="full-card">
-          <h2>Principais Leis de Proteção no Brasil</h2>
-          <div class="law-item">
-            <h3>Lei Maria da Penha (Lei nº 11.340/2006)</h3>
-            <p>Marco de proteção às mulheres contra a violência doméstica e familiar, garantindo medidas protetivas e assistência integral.</p>
-          </div>
-          <div class="law-item">
-            <h3>Lei Carolina Dieckmann (Lei nº 12.737/2012)</h3>
-            <p>Tipifica crimes cibernéticos, como invasão de dispositivos e furto/vazamento de dados e imagens privadas.</p>
-          </div>
-          <div class="law-item">
-            <h3>Lei do Stalking (Lei nº 14.132/2021)</h3>
-            <p>Criminaliza a perseguição obsessiva e reiterada, física ou online, que ameace a liberdade e a privacidade da pessoa.</p>
-          </div>
-          <div class="law-item">
-            <h3>Lei da Violência Psicológica (Lei nº 14.188/2021)</h3>
-            <p>Penaliza condutas que causem dano emocional à mulher por meio de humilhação, isolamento, chantagem ou controle.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABA: CANAIS DE AJUDA -->
-      <section id="ajuda" class="tab-panel">
-        <div class="help-box">
-          <h2>Canais Oficiais de Atendimento Gratuito e Confidencial</h2>
-          <div class="contact-grid">
-            <div class="contact-card">
-              <div class="contact-number">Ligue 180</div>
-              <h4>Central de Atendimento à Mulher</h4>
-              <p>Gratuito e disponível 24 horas por dia. Oferece escuta, orientações e encaminhamento para a rede de acolhimento.</p>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-number">Ligue 190</div>
-              <h4>Polícia Militar (Emergência)</h4>
-              <p>Para emergências imediatas, agressões em andamento ou risco iminente à integridade física.</p>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-number">SaferNet</div>
-              <h4>Helpline Digital</h4>
-              <p>Atendimento especializado online para crimes virtuais, cibercrime e vazamento de dados (canaldeajuda.org.br).</p>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-number">DEAM / 191</div>
-              <h4>Delegacia da Mulher</h4>
-              <p>Procure a Delegacia Especializada de Atendimento à Mulher mais próxima para registro de B.O. e medida protetiva.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
     </main>
 
-    <!-- ÁREA DE PÁGINAS EXPANDIDAS DE CONTEÚDO (DETALHES) -->
-    <section id="detail-view" class="content-view hidden">
-      <button class="back-btn" onclick="closeDetail()">&larr; Voltar para o painel principal</button>
-      
-      <div id="detail-content-container" class="detail-body">
-        <!-- O conteúdo dinâmico será injetado pelo JavaScript -->
-      </div>
-    </section>
-
-    <!-- Rodapé Interativo -->
-    <footer class="main-footer">
-      <div class="footer-reflection">
-        <p id="reflection-quote">"A informação clara e o acolhimento seguro transformam vidas."</p>
-        <button id="new-quote-btn">Gerar Mensagem de Apoio</button>
-      </div>
-      <p class="copyright">&copy; Portal Acolher & Proteger — Design em Tons Lilás para Conforto e Leitura</p>
-    </footer>
-
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
