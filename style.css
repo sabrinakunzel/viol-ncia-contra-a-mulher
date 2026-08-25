@@ -11,6 +11,9 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Cabeçalho */
@@ -55,6 +58,7 @@ body {
     max-width: 950px;
     margin: 30px auto;
     padding: 0 20px;
+    flex: 1;
 }
 
 /* Busca Dinâmica */
@@ -232,4 +236,25 @@ body {
     margin-bottom: 8px;
     border-radius: 8px;
     border-left: 4px solid #6C5CE7;
+}
+
+/* Rodapé Personalizado */
+.footer {
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    background: linear-gradient(135deg, #D6CCF7, #C3B5F2);
+    border-top: 2px solid #B8A8EC;
+    color: #3D2C5E;
+    font-size: 0.95rem;
+}
+
+.footer p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.footer strong {
+    color: #2D253A;
+    font-weight: 700;
 }
