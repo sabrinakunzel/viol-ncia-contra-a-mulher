@@ -48,9 +48,37 @@ document.addEventListener('DOMContentLoaded', function() {
         modalEmergencia.classList.remove('active');
     });
 
+    // 4. Controle do Modal Dinâmico de Detalhes dos Cards
+    const modalDetalhes = document.getElementById('modalDetalhes');
+    const closeModalDetalhes = document.getElementById('closeModalDetalhes');
+    const infoModalImg = document.getElementById('infoModalImg');
+    const infoModalTitle = document.getElementById('infoModalTitle');
+    const infoModalDesc = document.getElementById('infoModalDesc');
+    const infoModalLink = document.getElementById('infoModalLink');
+    const btnInfos = document.querySelectorAll('.card-btn-info');
+
+    btnInfos.forEach(btn => {
+        btn.addEventListener('click', () => {
+            infoModalTitle.textContent = btn.getAttribute('data-title');
+            infoModalImg.src = btn.getAttribute('data-img');
+            infoModalDesc.textContent = btn.getAttribute('data-desc');
+            infoModalLink.href = btn.getAttribute('data-site');
+            
+            modalDetalhes.classList.add('active');
+        });
+    });
+
+    closeModalDetalhes.addEventListener('click', () => {
+        modalDetalhes.classList.remove('active');
+    });
+
+    // Fechar modais ao clicar fora da caixa branca
     window.addEventListener('click', (event) => {
         if (event.target === modalEmergencia) {
             modalEmergencia.classList.remove('active');
+        }
+        if (event.target === modalDetalhes) {
+            modalDetalhes.classList.remove('active');
         }
     });
 });
